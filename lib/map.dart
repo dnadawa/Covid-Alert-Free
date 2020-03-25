@@ -15,20 +15,6 @@ class MapPage extends StatefulWidget {
 
 class _MapPageState extends State<MapPage> {
 
-
-//  static MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-//    keywords: <String>[],
-//    childDirected: false,
-//    testDevices: <String>[], // Android emulators are considered test devices
-//  );
-//  InterstitialAd myInterstitial = InterstitialAd(
-//    adUnitId: InterstitialAd.testAdUnitId,
-//    targetingInfo: targetingInfo,
-//    listener: (MobileAdEvent event) {
-//      print("InterstitialAd event is $event");
-//    },
-//  );
-
   Completer<GoogleMapController> _controller = Completer();
   final Set<Marker> _markers = {};
   var markerlist;
@@ -183,7 +169,7 @@ getLanguage() async{
               padding: const EdgeInsets.fromLTRB(15,50,0,0),
               child: CupertinoSlidingSegmentedControl(
                 children: {
-                  'Recorded': Text(language=='English'?'Recorded':'Todos',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
+                  'Recorded': Text(language=='English'?'Recorded':'Mis registros',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
                   'Contacted': Text(language=='English'?'Contacted':'Contacto',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
                 },
                 onValueChanged: (value) {
